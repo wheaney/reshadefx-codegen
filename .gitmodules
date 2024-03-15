@@ -1,0 +1,3 @@
+[submodule "modules/reshade"]
+	path = modules/reshade
+	url = https://github.com/wheaney/reshade.git
