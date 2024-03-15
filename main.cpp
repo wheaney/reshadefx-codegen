@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
     }
 
     reshadefx::parser parser;
-    std::unique_ptr<reshadefx::codegen> codegen(reshadefx::create_codegen_glsl(true, true, false));
+    std::unique_ptr<reshadefx::codegen> codegen(reshadefx::create_codegen_glsl(false, false, false));
     if (!parser.parse(std::move(preprocessor.output()), codegen.get())) {
         std::cerr << parser.errors() << std::endl;
         return false;
