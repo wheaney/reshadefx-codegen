@@ -60,9 +60,10 @@ int main(int argc, char *argv[])
         return 1;
     }
 
+    output_file << "// Automatically generated from ReShadeFX\n// See https://github.com/wheaney/reshadefx-codegen\n" << std::endl;
+
     output_file.write(reinterpret_cast<const char*>(module.code.data()), module.code.size());
     output_file.close();
-
 
     return 0;
 }
